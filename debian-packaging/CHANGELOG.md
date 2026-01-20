@@ -6,6 +6,14 @@
 
 Released on ReleaseDate.
 
+* `Send` added to various traits that were previously just `Read`. (#25)
+* Fixed version comparisons of tilde against other characters. (#27)
+* MSRV 1.75 -> 1.88.
+* Migrated from `xz2` crate to `liblzma` (#29)
+* `mailparse` 0.15 -> 0.16.
+* `strum` 0.26 -> 0.27.
+* `thiserror` 1.0 -> 2.0.
+
 ## 0.18.0
 
 Released on 2024-11-02.

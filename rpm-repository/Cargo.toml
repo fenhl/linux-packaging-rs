@@ -2,7 +2,7 @@
 name = "rpm-repository"
 version = "0.3.0"
 edition = "2021"
-rust-version = "1.75"
+rust-version = "1.88.0"
 authors = ["Gregory Szorc <gregory.szorc@gmail.com>"]
 license = "MPL-2.0"
 description = "RPM repository interaction"
@@ -15,17 +15,17 @@ readme = "README.md"
 digest = "0.10.7"
 futures = "0.3.31"
 hex = "0.4.3"
-pin-project = "1.1.7"
-serde = { version = "1.0.214", features = ["derive"] }
+pin-project = "1.1.10"
+serde = { version = "1.0.228", features = ["derive"] }
 serde-xml-rs = "0.6.0"
 sha-1 = "0.10.1"
-sha2 = "0.10.8"
-thiserror = "1.0.66"
-tokio = { version = "1.41.0", features = ["macros"] }
-url = "2.5.2"
+sha2 = "0.10.9"
+thiserror = "2.0.18"
+tokio = { version = "1.49.0", features = ["macros"] }
+url = "2.5.8"
 
 [dependencies.async-compression]
-version = "0.4.17"
+version = "0.4.37"
 features = ["futures-io", "gzip", "xz", "zstd"]
 
 [dependencies.reqwest]

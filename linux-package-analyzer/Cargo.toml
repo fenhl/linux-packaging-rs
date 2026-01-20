@@ -2,7 +2,7 @@
 name = "linux-package-analyzer"
 version = "0.3.0"
 edition = "2021"
-rust-version = "1.75"
+rust-version = "1.88.0"
 authors = ["Gregory Szorc <gregory.szorc@gmail.com>"]
 license = "MPL-2.0"
 description = "CLI tool to analyze Linux packages"
@@ -16,31 +16,24 @@ name = "lpa"
 path = "src/main.rs"
 
 [dependencies]
-anyhow = "1.0.92"
-clap = "4.5.20"
-cpio = "0.4.0"
+anyhow = "1.0.100"
+clap = "4.5.54"
 futures = "0.3.31"
 futures-util = "0.3.31"
 iced-x86 = "1.21.0"
-indoc = "2.0.5"
-liblzma = { version = "0.4.5", features = ["static"] }
-num_cpus = "1.16.0"
-object = "0.36.5"
-once_cell = "1.20.2"
+indoc = "2.0.7"
+num_cpus = "1.17.0"
+object = "0.38.1"
+once_cell = "1.21.3"
 pbr = "1.1.1"
-rusqlite = { version = "0.29.0", features = ["bundled"] }
-symbolic-demangle = "12.12.0"
-tokio = { version = "1.41.0", features = ["full"] }
-url = "2.5.2"
-zstd = "0.13.2"
+rusqlite = { version = "0.38.0", features = ["bundled", "fallible_uint"] }
+symbolic-demangle = "12.17.1"
+tokio = { version = "1.49.0", features = ["full"] }
+url = "2.5.8"
 
 [dependencies.debian-packaging]
 version = "0.18.0"
 path = "../debian-packaging"
-
-[dependencies.rpm-repository]
-version = "0.3.0"
-path = "../rpm-repository"
 
 # rpm-rs seems to be unmaintained and its old dependencies are holding us back.
 # Disabled until we figure out a path forward.
@@ -49,4 +42,4 @@ path = "../rpm-repository"
 #rev = "d6623c68a85e3a14f4260c2161c348fa697131c0"
 
 [dev-dependencies]
-trycmd = "0.15.8"
+trycmd = "0.15.11"

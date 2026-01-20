@@ -26,8 +26,7 @@ async fn fetch_url(
     let res = client.get(request_url.clone()).send().await.map_err(|e| {
         RpmRepositoryError::IoPath(
             path.to_string(),
-            std::io::Error::new(
-                std::io::ErrorKind::Other,
+            std::io::Error::other(
                 format!("error sending HTTP request: {:?}", e),
             ),
         )
@@ -45,8 +44,7 @@ async fn fetch_url(
         } else {
             RpmRepositoryError::IoPath(
                 path.to_string(),
-                std::io::Error::new(
-                    std::io::ErrorKind::Other,
+                std::io::Error::other(
                     format!("bad HTTP status code: {:?}", e),
                 ),
             )
@@ -55,7 +53,7 @@ async fn fetch_url(
 
     Ok(Box::pin(
         res.bytes_stream()
-            .map_err(|e| std::io::Error::new(std::io::ErrorKind::Other, format!("{:?}", e)))
+            .map_err(|e| std::io::Error::other(format!("{:?}", e)))
             .into_async_read(),
     ))
 }
@@ -184,7 +182,7 @@ mod test {
     use super::*;
 
     const FEDORA_41_URL: &str =
-        "https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/41/Server/x86_64/os";
+        "https://mirror.math.princeton.edu/pub/fedora-archive/fedora/linux/releases/41/Server/x86_64/os";
 
     #[tokio::test]
     async fn fedora_41() -> Result<()> {
