@@ -32,3 +32,7 @@ features = ["futures-io", "gzip", "xz", "zstd"]
 version = "0.13"
 default-features = false
 features = ["rustls-no-provider", "stream"]
+
+[features]
+default = ["rustls-default-provider"]
+rustls-default-provider = ["reqwest/rustls"]
