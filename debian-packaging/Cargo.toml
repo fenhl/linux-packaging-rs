@@ -21,15 +21,15 @@ chrono = "0.4.43"
 digest = "0.10.7"
 futures = "0.3.31"
 hex = "0.4.3"
-libflate = { git = "https://github.com/abraemer/libflate" } # workaround for https://github.com/sile/libflate/issues/85
+libflate = "2.3.2"
 liblzma = { version = "0.4.5", features = ["static"] }
 mailparse = "0.16.1"
 md-5 = "0.10.6"
 once_cell = "1.21.3"
 os_str_bytes = { version = "7.1.1", features = ["conversions"] }
-pin-project = "1.1.10"
 pgp = "0.14.2"
 pgp-cleartext = "0.11.0"
+pin-project = "1.1.10"
 rand = "0.8.5"
 regex = "1.12.2"
 serde = { version = "1.0.228", features = ["derive"] }

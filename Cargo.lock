@@ -2173,8 +2173,9 @@ checksum = "ce5d3ddc6d3fa000eb1536d85e147bfe31aacaba692ed6a876f95cb7c855be78"
 
 [[package]]
 name = "libflate"
-version = "2.2.1"
-source = "git+https://github.com/abraemer/libflate#f7347a52cdad26bc534ab062c0bbe3831df8c14c"
+version = "2.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "561a8da1a50e1428d3c51321dafeca849df992a5bb67720c386131234caba82e"
 dependencies = [
  "adler32",
  "crc32fast",
@@ -2185,8 +2186,9 @@ dependencies = [
 
 [[package]]
 name = "libflate_lz77"
-version = "2.2.0"
-source = "git+https://github.com/abraemer/libflate#f7347a52cdad26bc534ab062c0bbe3831df8c14c"
+version = "2.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ff7a10e427698aef6eef269482776debfef63384d30f13aad39a1a95e0e098fd"
 dependencies = [
  "hashbrown 0.16.1",
  "no_std_io2",
